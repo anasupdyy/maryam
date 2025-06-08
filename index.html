@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jacaylkaaga sumayo</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 0;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(230, 0, 115, 0.2);
+      margin-top: 30px;
+      margin-bottom: 30px;
+      border: 1px solid #ffccdd;
+      position: relative;
+    }
+
+    h1 {
+      color: #e60073;
+      font-size: 36px;
+      margin: 20px 0;
+      animation: heartbeat 1.5s infinite;
+    }
+
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.05); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.8;
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    .photo-frame {
+      display: inline-block;
+      padding: 10px;
+      background: linear-gradient(45deg, #ff66b3, #e60073);
+      border-radius: 15px;
+      margin: 25px 0;
+      animation: float 6s ease-in-out infinite;
+      box-shadow: 0 15px 30px rgba(230, 0, 115, 0.3);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+
+    img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      border: 5px solid white;
+      display: block;
+    }
+
+    .message {
+      font-size: 20px;
+      color: #333;
+      line-height: 1.6;
+      margin: 25px 0;
+      padding: 15px;
+      background-color: rgba(255, 204, 221, 0.3);
+      border-radius: 10px;
+      transition: all 0.3s;
+    }
+
+    .message:hover {
+      background-color: rgba(255, 204, 221, 0.5);
+    }
+
+    .btn {
+      background-color: #e60073;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      margin: 20px 0;
+      transition: all 0.3s;
+      box-shadow: 0 5px 15px rgba(230, 0, 115, 0.3);
+    }
+
+    .btn:hover {
+      background-color: #cc0066;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(230, 0, 115, 0.4);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .signature {
+      font-style: italic;
+      font-size: 18px;
+      color: #e60073;
+      margin-top: 20px;
+    }
+
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff66b3;
+      transform: rotate(45deg);
+      opacity: 0;
+      animation: floatHeart 5s ease-in-out infinite;
+    }
+
+    .heart:before, .heart:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-color: #ff66b3;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart:before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart:after {
+      top: 0;
+      left: -10px;
+    }
+
+    @keyframes floatHeart {
+      0% { transform: rotate(45deg) translateY(0) scale(0.5); opacity: 0; }
+      20% { opacity: 0.7; }
+      100% { transform: rotate(45deg) translateY(-300px) scale(1); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts" id="heartsContainer"></div>
+  
+  <div class="container">
+    <h1>❤️ I LOVE YOU MARYAN   ❤️</h1>
+    <p>Qalbigayga wuxuu garaacmaa markasta oo aan kaa fikiro.<br>
+    Waxaan u maleyn jiray in jaceylku yahay sheekooyin kaliya lagu akhriyo, ilaa aan adiga kugu bartay.<br>
+    Waqtiga aan kula joogo wuxuu noqday daawo aan qalbigayga bogsiinayo.<br><br>
+    Indhahaaga waa nal, codkaaguna waa dejin.<br>
+    Ma jiro maalin aanan kuu duceynin, mana jiro habeen aanan kugu riyoonin.<br><br>
+    Adiga ayaan kuu jeclahay — adiga iyo qalbiga aad iga xaday.<br><br>
+    Jaceylka aan kuu qabo ma aha kaliya eray, waa noloshayda.</p>
+    
+    <div class="photo-frame">
+      <img src="sawirka maryam.jpg" alt="Jacayl Aad Ah" id="mainImage">
+    </div>
+    
+    <div class="message" id="message1">
+      Qof walba wuu jeclaan karaa, balse aniga adiga ayaa qalbigayga u gaar ah....
+    </div>
+    
+    <div class="message hidden" id="message2">
+      Markasta oo aan kuu qoslo, qalbigayga ayaa kuu faraxsan.....
+    </div>
+    
+    <div class="message hidden" id="message3">
+      Jaceylkeygu ma aha hadal, waa ficil iyo dareen dhab ah.....
+    </div>
+    
+    <button class="btn" id="nextBtn">Akhriso Fariin Jacayl Kale</button>
+    
+    <div class="signature">Ku guuleystaha qalbigayga</div>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="hees   .mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Create floating hearts
+    function createHearts() {
+      const container = document.getElementById('heartsContainer');
+      for (let i = 0; i < 15; i++) {
+        setTimeout(() => {
+          const heart = document.createElement('div');
+          heart.classList.add('heart');
+          heart.style.left = Math.random() * 100 + 'vw';
+          heart.style.bottom = '-20px';
+          heart.style.width = (Math.random() * 20 + 10) + 'px';
+          heart.style.height = heart.style.width;
+          heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+          heart.style.animationDelay = (Math.random() * 2) + 's';
+          container.appendChild(heart);
+        }, i * 300);
+      }
+    }
+
+    // Message cycling
+    let currentMessage = 1;
+    document.getElementById('nextBtn').addEventListener('click', function() {
+      document.getElementById('message' + currentMessage).classList.add('hidden');
+      currentMessage = currentMessage < 3 ? currentMessage + 1 : 1;
+      document.getElementById('message' + currentMessage).classList.remove('hidden');
+      
+      // Change button text
+      const btnTexts = ["Akhriso Jacayl Kale", "Raadi Qoraal Cusub", "Guji Mar Kale"];
+      this.textContent = btnTexts[currentMessage - 1];
+    });
+
+    // Play music on interaction
+    document.addEventListener('click', function() {
+      const audio = document.getElementById("bgMusic");
+      audio.volume = 0.2;
+      audio.play().catch(e => console.log("Muusig lama bilown karo"));
+    }, { once: true });
+
+    // Initialize
+    window.onload = function() {
+      createHearts();
+      setInterval(createHearts, 3000);
+      
+      // If image fails to load
+      document.getElementById('mainImage').onerror = function() {
+        // this.src = 'https://i.ibb.co/5GxX0bC/romantic-placeholder.jpg';
+      };
+    };
+  </script>
+</body>
+</html>
